@@ -1,0 +1,113 @@
+/* GLOBAL STYLE */
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+/*Good for visualizing the boxes*/
+/* * {
+ outline: 1px dotted orange;
+} */
+
+/* this is a good comment to add:  */
+/* Positioning Methodology: elements erlier in the DOM push successive elemnts away */
+
+/* HEADER */
+
+header {
+  background: #444;
+  height: 100px; /* have to eyeball this height*/
+  margin-bottom: 30px; /* holds to our positioning methodology */
+}
+
+nav {
+  width: 960px;
+  margin: 0px auto; /* see how top right img lines with the 960 img below it*/
+}
+
+nav img { /* will select all img's in nav, even tho there's only one */
+  margin-top: 15px;
+  margin-right: 30px; /*might need to increase*/
+  float: left; /*centers*/
+}
+
+nav li { /* will select all li's within the nav */
+  display: inline-block; /* inline-block allows for vertical positioning that just inline won't give  */
+  margin-top: 40px;
+  margin-right: 70px;
+}
+
+a {
+  color: #888;
+  text-decoration: none;
+}
+
+
+/* MAIN */
+
+main {
+  width: 960px;
+  margin: 0px auto;
+}
+
+/* we are setting the gutters for the sub-banners here, which violates our methodology (shove stuff away) but offers an elegant solution */
+main li {
+  /*list-style: none; *//* hides bullets if not done in reset */
+  float: left;
+  margin: 30px 30px 30px 0px;
+}
+
+main li:last-child {
+  margin-right: 0px; /* so that last li doesn't have right margin and get bumped off the page */
+}
+
+
+/* MAIN - FEATURED SECTION */
+
+section img {
+  float: left;
+}
+
+section div {
+  width: calc(50% - 30px); /*   */
+  float: left;
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+
+section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+section p {
+  height: 322px;
+  margin-bottom: 10px;
+  overflow: auto; /* overflow: scroll - gives me a scroll bar on the bottom */
+  font-style: italic;
+  line-height: 22px;
+}
+
+section button {
+  border: none;
+  font-size: 18px;
+  color: white; /* button text color */
+  background: black; /* button background color */
+  padding: 10px 30px;
+  border-radius: 3px; /* adds rounded corners */
+  transition: 350ms; /* timing for the button hover transition color */
+  cursor: pointer; /* gives pointer finger when you are hovering over button */
+}
+
+section button:hover {
+  background: green;
+}
+
+
+/* FOOTER */
+
+footer {
+  clear: both; /* this "clears" out both the right and left floats from above, so footer doesn't fly up to the main section */
+  height: 150px;
+  background: #444;
+}
